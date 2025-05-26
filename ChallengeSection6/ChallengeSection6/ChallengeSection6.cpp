@@ -47,11 +47,22 @@ int main()
     std::cout << "Number of large rooms: " << large_room_input << std::endl;
     std::cout << "Price per small room: $" << small_room_cost << std::endl;
     std::cout << "Price per large room: $" << large_room_cost << std::endl;
-    std::cout << "Cost : $" << (small_room_input * small_room_cost) + (large_room_input * large_room_cost) << std::endl;
+    
+    std::cout 
+        << "Cost : $" 
+        <<  (small_room_input * small_room_cost) + 
+            (large_room_input * large_room_cost) 
+        << std::endl;
+    
     const double cost_total_rooms{ (small_room_input * small_room_cost) + (large_room_input * large_room_cost) };
     const double cost_total_rooms_tax{ (cost_total_rooms * tax_rate) }; //Calculate the tax of 6%
     const double total_cost_estimate{ cost_total_rooms + cost_total_rooms_tax };
-    std::cout << "Tax: $" << cost_total_rooms_tax << std::endl;
+    
+    std::cout 
+        << "Tax: $" 
+        << cost_total_rooms_tax 
+        << std::endl;
+    
     std::cout << "\n=============================" << std::endl;
     std::cout << "Total Estimate: $" << total_cost_estimate << std::endl;
     std::cout << "This estimate is valid for " << valid_days << " days" << std::endl;
